@@ -3,6 +3,8 @@ module ZendeskAPI
 
 
   class Ticket < Resource; end
+  class Tag < Resource; end
+
   class Forum < Resource; end
   class User < Resource; end
   class Category < Resource; end
@@ -204,8 +206,6 @@ module ZendeskAPI
       has :author, :class => User
     end
 
-    class Tag < Resource; end
-
     class Comment < Data
       include Save
 
@@ -360,4 +360,3 @@ module ZendeskAPI
     has CRMDataStatus, :path => 'crm_data/status'
   end
 end
-
